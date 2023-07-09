@@ -20,8 +20,8 @@ function createPromise(position, delay) {
 
 btn.addEventListener('click', e => {
   e.preventDefault();
-  let firstDelay = number(delay.value);
-  let delayStep = number(step.value);
+  let firstDelay = Number(delay.value);
+  let delayStep = Number(step.value);
   for (let i = 0; i < amount.value; i++) {
     createPromise(1 + i, firstDelay + i * delayStep)
       .then(({ position, delay }) => {
